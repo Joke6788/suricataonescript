@@ -69,15 +69,15 @@ Before running the script, ensure:
 ### Method 1: Direct Run (Recommended)
 
 ```bash
-curl -sSL https://raw.githubusercontent.com/yourusername/yourrepo/main/setup.sh | sudo bash
+curl -sSL https://raw.githubusercontent.com/Joke6788/suricataonelinescript/main/fullsuricata.sh | sudo bash
 ```
 
 ### Method 2: Download and Run
 
 ```bash
-wget https://raw.githubusercontent.com/yourusername/yourrepo/main/setup.sh
-chmod +x setup.sh
-sudo ./setup.sh
+wget https://raw.githubusercontent.com/Joke6788/suricataonelinescript/main/fullsuricata.sh
+chmod +x fullsuricata.sh
+sudo ./fullsuricata.sh
 ```
 
 ### Method 3: One-Liner (Copy & Paste)
@@ -353,9 +353,9 @@ This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) 
 
 | Channel | Link |
 |---------|------|
-| **Issues** | [GitHub Issues](https://github.com/yourusername/yourrepo/issues) |
-| **Discussions** | [GitHub Discussions](https://github.com/yourusername/yourrepo/discussions) |
-| **Email** | your-email@example.com |
+| **Issues** | [GitHub Issues](https://github.com/Joke6788/suricataonelinescript/issues) |
+| **Discussions** | [GitHub Discussions](https://github.com/Joke6788/suricataonelinescript/discussions) |
+| **Repository** | [GitHub Repo](https://github.com/Joke6788/suricataonelinescript) |
 
 ---
 
@@ -363,7 +363,7 @@ This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) 
 
 If you find this useful, please ⭐ star the repository!
 
-[![Star History Chart](https://api.star-history.com/svg?repos=yourusername/yourrepo&type=Date)](https://star-history.com/#yourusername/yourrepo&Date)
+[![Star History Chart](https://api.star-history.com/svg?repos=Joke6788/suricataonelinescript&type=Date)](https://star-history.com/#Joke6788/suricataonelinescript&Date)
 
 ---
 
@@ -371,7 +371,7 @@ If you find this useful, please ⭐ star the repository!
 
 ```bash
 # 🚀 Install
-curl -sSL https://raw.githubusercontent.com/yourusername/yourrepo/main/setup.sh | sudo bash
+curl -sSL https://raw.githubusercontent.com/Joke6788/suricataonelinescript/main/fullsuricata.sh | sudo bash
 
 # 🔍 Check Status
 sudo systemctl status suricata
