@@ -1,9 +1,13 @@
-# 🛡️ Suricata + OSSEC Integration Setup Script
+Here's the updated README.md for your GitHub repository:
+
+---
+
+# 🛡️ Suricata One-Line Setup Script
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Bash](https://img.shields.io/badge/Shell-Bash-4EAA25?logo=gnubash&logoColor=white)](https://www.gnu.org/software/bash/)
 [![Suricata](https://img.shields.io/badge/Suricata-IDS/IPS-EF3B2D?logo=suricata&logoColor=white)](https://suricata.io/)
-[![OSSEC](https://img.shields.io/badge/OSSEC-HIDS-00599C?logo=linux&logoColor=white)](https://www.ossec.net/)
+[![Platform](https://img.shields.io/badge/Platform-Linux%20%7C%20Ubuntu%20%7C%20Debian-blue)](https://ubuntu.com/)
 
 > **One-line script** to automatically install and configure Suricata IDS/IPS with OSSEC integration
 
@@ -28,11 +32,11 @@
 ## 🎯 Overview
 
 This repository provides an automated **one-line script** to set up:
-- **Suricata** - High-performance Network IDS/IPS engine
-- **Emerging Threats (ET/Open)** - Community ruleset
-- **OSSEC Integration** - Forward Suricata alerts to OSSEC HIDS
+- ✅ **Suricata** - High-performance Network IDS/IPS engine
+- ✅ **Emerging Threats (ET/Open)** - Community ruleset
+- ✅ **OSSEC Integration** - Forward Suricata alerts to OSSEC HIDS
 
-Perfect for security practitioners who want to quickly deploy network monitoring capabilities.
+Perfect for security practitioners who want to quickly deploy network monitoring capabilities with zero configuration hassle.
 
 ---
 
@@ -56,7 +60,7 @@ Before running the script, ensure:
 
 | Requirement | Details |
 |-------------|---------|
-| **OS** | Ubuntu/Debian-based Linux (20.04+) |
+| **OS** | Ubuntu/Debian-based Linux (18.04+, 20.04+, 22.04+) |
 | **User** | Root or sudo privileges |
 | **Network** | Internet connection (for apt packages & rules) |
 | **Disk Space** | Minimum 500MB free |
@@ -69,15 +73,15 @@ Before running the script, ensure:
 ### Method 1: Direct Run (Recommended)
 
 ```bash
-curl -sSL https://raw.githubusercontent.com/Joke6788/suricataonelinescript/main/fullsuricata.sh | sudo bash
+curl -sSL https://raw.githubusercontent.com/Joke6788/suricataonelinescript/main/setup.sh | sudo bash
 ```
 
 ### Method 2: Download and Run
 
 ```bash
-wget https://raw.githubusercontent.com/Joke6788/suricataonelinescript/main/fullsuricata.sh
-chmod +x fullsuricata.sh
-sudo ./fullsuricata.sh
+wget https://raw.githubusercontent.com/Joke6788/suricataonelinescript/main/setup.sh
+chmod +x setup.sh
+sudo ./setup.sh
 ```
 
 ### Method 3: One-Liner (Copy & Paste)
@@ -90,7 +94,7 @@ sudo apt update && sudo apt install -y suricata && sudo suricata-update && sudo 
 
 ## 🔧 What This Script Does
 
-Here's a step-by-step breakdown:
+### Step-by-Step Breakdown
 
 ```mermaid
 graph LR
@@ -231,15 +235,19 @@ sudo tail -f /var/ossec/logs/alerts/alerts.log | grep suricata
 ## ⚙️ Configuration Details
 
 ### Suricata Configuration
-- **Config File**: `/etc/suricata/suricata.yaml`
-- **Rules Directory**: `/var/lib/suricata/rules/`
-- **Log Directory**: `/var/log/suricata/`
-- **EVE Log**: `/var/log/suricata/eve.json` (JSON format)
+| Setting | Location |
+|---------|----------|
+| **Config File** | `/etc/suricata/suricata.yaml` |
+| **Rules Directory** | `/var/lib/suricata/rules/` |
+| **Log Directory** | `/var/log/suricata/` |
+| **EVE Log** | `/var/log/suricata/eve.json` (JSON format) |
 
 ### OSSEC Integration
-- **Config File**: `/var/ossec/etc/ossec.conf`
-- **Log Format**: JSON
-- **Log Location**: `/var/log/suricata/eve.json`
+| Setting | Location |
+|---------|----------|
+| **Config File** | `/var/ossec/etc/ossec.conf` |
+| **Log Format** | JSON |
+| **Log Location** | `/var/log/suricata/eve.json` |
 
 ### Network Interface Configuration
 After installation, configure Suricata's network interface:
@@ -371,7 +379,7 @@ If you find this useful, please ⭐ star the repository!
 
 ```bash
 # 🚀 Install
-curl -sSL https://raw.githubusercontent.com/Joke6788/suricataonelinescript/main/fullsuricata.sh | sudo bash
+curl -sSL https://raw.githubusercontent.com/Joke6788/suricataonelinescript/main/setup.sh | sudo bash
 
 # 🔍 Check Status
 sudo systemctl status suricata
@@ -387,6 +395,17 @@ sudo systemctl restart suricata
 
 # 🗑️ Uninstall
 sudo apt remove --purge suricata -y
+```
+
+---
+
+## 📝 Script File Structure
+
+```
+suricataonelinescript/
+├── setup.sh          # Main installation script
+├── README.md         # Documentation
+└── LICENSE           # MIT License
 ```
 
 ---
